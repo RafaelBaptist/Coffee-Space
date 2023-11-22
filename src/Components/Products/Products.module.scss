@@ -1,0 +1,23 @@
+
+@import '@/styles/mixins.scss';
+
+
+  .products {
+    @include  max-width;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+    @include device(notebook){
+      grid-template-columns: repeat(2,1fr);
+
+
+  }
+
+  @include device(tablet) {
+    grid-template-columns: repeat(1,1fr);
+}
+  @include device(mobile) {
+    grid-template-columns: repeat(1,1fr);
+}
+
+}

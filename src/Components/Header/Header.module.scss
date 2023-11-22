@@ -1,0 +1,88 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.header{
+  
+  
+   min-height: 60rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow-x: clip;
+   position: relative;
+   margin-bottom: 6rm;
+background: radial-gradient($lightPrimary, $primary);
+  
+.content{
+    text-align: center;
+    max-width: 46rem;
+    padding: 0 1rem;
+  
+
+}
+
+.line{
+    border-top: 1px solid $secondary;
+    margin: 0.5rem auto 1.5rem auto;
+    width: 50%;
+
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+h1 {
+color: $secondary;
+}
+
+
+.leaf1 {
+    position: absolute;
+    bottom: 8rem;
+    right: 0; 
+
+    @include device(notebook){
+
+        bottom: 6rem;
+
+    }
+}
+
+.coffee {
+    position: absolute;
+    bottom:  -11rem;
+    right: 0;
+}
+
+.bag {
+    position: absolute;
+    bottom:  -2rem;
+    left: 0rem;  
+    filter: brightness(60%);
+    transform: scaleX(-1);
+    @include device(notebook){
+     
+       
+
+    }
+}
+
+.leaf2 {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem; 
+    @include device(notebook){
+        left: -10rem;
+        
+
+    }
+}
+
+.leaf1, .leaf2, .bag, .coffee {
+    @include device(tablet) {
+        display: none;
+    }
+
+}
+}
